@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="8286437328803353698" datatype="html">
+        <source>for test sample-component works!</source>
+        <target state="translated">El componente funciona</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sample-component/sample-component.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1586441093982144361" datatype="html">
+        <source> for dates like <x id="INTERPOLATION" equiv-text="{{&quot;05/01/2022&quot; | date}}"/> use pipe</source>
+        <target> fechas <x id="INTERPOLATION" equiv-text="{{&quot;05/01/2022&quot; | date}}"/> use pipe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sample-component/sample-component.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8230667035758312692" datatype="html">
+        <source> for currencies like <x id="INTERPOLATION" equiv-text="{{129 | currency}}"/> use pipe</source>
+        <target> moneda<x id="INTERPOLATION" equiv-text="{{129 | currency}}"/> use pipe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sample-component/sample-component.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3271070469815256851" datatype="html">
+        <source> for test of images</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sample-component/sample-component.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4323851768315885124" datatype="html">
+        <source>just me</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sample-component/sample-component.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1737753151350322492" datatype="html">
+        <source><x id="PH" equiv-text="this.title"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sample-component/sample-component.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
