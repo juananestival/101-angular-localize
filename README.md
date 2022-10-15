@@ -207,3 +207,65 @@ export class HomeScreenComponent implements OnInit {
 
 ```
 
+# build and serve the app
+
+```sh
+ ng build --localize  
+ serve dist/101-angular-localize  
+ ```
+
+ # full sample header
+ ```ts
+ import { Component, OnInit, LOCALE_ID, Inject } from '@angular/core';
+
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
+})
+export class HeaderComponent implements OnInit {
+  siteLanguage: any = 'Español';
+  siteLocale: string = 'es-ES';
+  languageList = [
+    { code: 'en-US', label: 'English' },
+    { code: 'es-ES', label: 'Español' },
+  ];
+
+  constructor(@Inject(LOCALE_ID) public locale: string) { }
+
+
+
+
+  ngOnInit(): void {
+    console.log(this.locale)
+    let currentLocale = this.languageList.find(element => element.code == this.locale);
+    this.siteLanguage=currentLocale?.label
+  }
+
+}
+```
+
+```html
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+    <ng-container>
+        <mat-icon>language</mat-icon>
+        <button mat-button  [matMenuTriggerFor]="anyname">{{siteLanguage}}<mat-icon>arrow_drop_down</mat-icon>
+        </button>
+        <mat-menu #anyname="matMenu">
+            <a mat-menu-item href="/en-US">English</a>
+            <a mat-menu-item href="/es-ES">Spanish</a>
+        </mat-menu>
+     </ng-container>
+  </mat-toolbar>
+  ```
